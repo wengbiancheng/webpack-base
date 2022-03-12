@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf dist && webpack",
     "debug": "node --inspect --inspect-brk node_modules/wepack/webpack.js"
   },
   "keywords": [],

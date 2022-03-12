@@ -1,4 +1,6 @@
 const path = require("path");
+const CopyRightWebpackPlugin = require("./plugins/copyright-webpack-plugin");
+const { FileListPlugin } = require('./plugins/file-list-plugin.js');
 
 
 module.exports = {
@@ -25,6 +27,11 @@ module.exports = {
             ]
         }]
     },
+    plugins: [
+        new FileListPlugin({
+            outputFile: 'my-assets.md',
+        })
+    ],
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].js"
